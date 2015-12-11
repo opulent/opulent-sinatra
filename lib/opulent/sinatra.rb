@@ -6,9 +6,12 @@ module Sinatra
   # @Templates
   module Templates
     def opulent(template, options = {}, locals = {}, &block)
-      render_opulent :op, template, options, locals, &block
+      render :op, template, options, locals, &block
     end
 
+    # Under development
+    # We will use the default sinatra render method until we find a way
+    # to send defined nodes from layout to view
     def render_opulent(engine, data, options = {}, locals = {}, &block)
       # merge app-level options
       engine_options = settings.respond_to?(engine) ? settings.send(engine) : {}
