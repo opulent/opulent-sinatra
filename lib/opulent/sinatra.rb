@@ -1,4 +1,4 @@
-require 'opulent'
+require_relative '../../../opulent/lib/opulent.rb'
 require 'opulent/sinatra/version'
 
 # @Sinatra
